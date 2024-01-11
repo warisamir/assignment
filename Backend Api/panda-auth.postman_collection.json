@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "3073e0e7-bb87-4790-9b89-5cc556a77685",
+		"name": "panda-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23529167"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"waris\",\r\n    \"email\":\"warisamir085@gmail.com\",\r\n    \"password\":\"waris1918\",\r\n    \"password_confirmation\":\"waris1918\",\r\n    \"tc\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "changePassword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "it is used to changed the password internally for privacy purpose"
+			},
+			"response": []
+		},
+		{
+			"name": "UserDetail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NTlmYWIxNmU2YTUwYmZhZmYyODViYTkiLCJpYXQiOjE3MDQ5NjI4ODAsImV4cCI6MTcwNTM5NDg4MH0.32QraOg5cPlEzxgbMju-NcrKDnUKStEe0XoFlxDvJnc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user/UserInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"UserInfo"
+					]
+				},
+				"description": "it is used to fetch the user information from the login id"
+			},
+			"response": []
+		},
+		{
+			"name": "Password-Reset-Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"warisamir1918@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/send-reset-password-email/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"send-reset-password-email",
+						""
+					]
+				},
+				"description": "it is used for making a request to change the password using email id which is authorised"
+			},
+			"response": []
+		},
+		{
+			"name": "Password Reset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "it is used to change the reset the password with having email only"
+			},
+			"response": []
+		}
+	]
+}
