@@ -22,5 +22,5 @@ app.use(express.json())
 app.use("/api/user", userRoutes)
 
 app.listen(port, () => {
-  console.log(`https://auth-testing-zsse.onrender.com:${port}`)
+  console.log(`server running on http://localhost:${port}`)
 })
