@@ -1,0 +1,10 @@
+PORT = 8000
+DATABASE_URL = "mongodb+srv://warisamir1918:waris1918@cluster0.zji50e8.mongodb.net/"
+
+JWT_SECRET_KEY = "dhsjf3423jhsdf3423df"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USER = 'warisamir085@gmail.com'
+EMAIL_PASS = 'ptrv ciwz muic cbkv'  // this thing needs to be generated everytime u make new api that is using nodemailer
+EMAIL_FROM = 'warisamir085@gmail.com'
